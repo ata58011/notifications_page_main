@@ -6,7 +6,7 @@ import three from "../images/avatar-jacob-thompson.webp";
 import four from "../images/avatar-rizky-hasanuddin.webp";
 import five from "../images/avatar-kimberly-smith.webp";
 import six from "../images/avatar-nathan-peterson.webp";
-import seven from '../images/avatar-anna-kim.webp'
+import seven from "../images/avatar-anna-kim.webp";
 
 const Notification = () => {
   const [countNotification, setCountNotification] = useState(0);
@@ -22,7 +22,7 @@ const Notification = () => {
 
     Array.from(elements).forEach((element) => {
       element.style.display = "none";
-      element.style.backgroundColor = "#FFFFF";
+      element.style.backgroundColor = "";
       element.classList.remove("unread", "bg-uncounted");
     });
 
@@ -30,7 +30,7 @@ const Notification = () => {
   };
 
   return (
-    <div className="bg-white font-jakarta flex flex-col p-8  max-w-4xl container	">
+    <div className="bg-white font-jakarta md:flex flex-col p-8  max-w-4xl container	">
       <div className="top-part flex justify-between pb-8">
         <div className="flex gap-x-4">
           <h1 className="text-2xl font-extrabold">Notifications</h1>
@@ -38,7 +38,10 @@ const Notification = () => {
             {countNotification}
           </span>
         </div>
-        <button className="text-grayblue" onClick={markAllAsRead}>
+        <button
+          className="text-grayblue hover:text-fontblue"
+          onClick={markAllAsRead}
+        >
           Mark all as read
         </button>
       </div>
@@ -48,7 +51,7 @@ const Notification = () => {
             <img src={one} alt="" className="w-16" />
             <div>
               <p className="explanation flex gap-x-2 items-center">
-                <span className="user-name font-extrabold text-[#21242e]">
+                <span className="user-name font-extrabold text-darkblue hover:text-fontblue">
                   Mark Webber
                 </span>
                 reacted to your recent post{" "}
@@ -64,7 +67,7 @@ const Notification = () => {
             <img src={two} alt="" className="w-16" />
             <div>
               <p className="explanation flex gap-x-2 items-center">
-                <span className="user-name font-extrabold text-darkblue">
+                <span className="user-name font-extrabold text-darkblue hover:text-fontblue">
                   Angela Gray
                 </span>
                 followed you
@@ -77,7 +80,7 @@ const Notification = () => {
             <img src={three} alt="" className="w-16" />
             <div>
               <p className="explanation flex gap-x-2 items-center">
-                <span className="user-name font-extrabold text-darkblue">
+                <span className="user-name font-extrabold text-darkblue hover:text-fontblue">
                   Jacob Thompson
                 </span>
                 Thompson has joined your group{" "}
@@ -91,7 +94,7 @@ const Notification = () => {
             <img src={four} alt="" className="w-16" />
             <div className="flex flex-col ">
               <p className="explanation flex gap-x-2 gap items-center">
-                <span className="user-name font-extrabold text-darkblue">
+                <span className="user-name font-extrabold text-darkblue hover:text-fontblue">
                   Rizky Hasanuddin
                 </span>
                 sent you a private message{" "}
@@ -112,7 +115,7 @@ const Notification = () => {
               <img src={five} alt="" className="w-16" />
               <div>
                 <p className="explanation flex gap-x-2 items-center">
-                  <span className="user-name font-extrabold text-darkblue">
+                  <span className="user-name font-extrabold text-darkblue hover:text-fontblue">
                     Kimberly Smith
                   </span>
                   commented on your picture{" "}
@@ -128,7 +131,7 @@ const Notification = () => {
             <img src={six} alt="" className="w-16" />
             <div>
               <p className="explanation flex gap-x-2 items-center">
-                <span className="user-name font-extrabold text-[#21242e]">
+                <span className="user-name font-extrabold text-darkblue hover:text-fontblue">
                   Mark Webber
                 </span>
                 reacted to your recent post
@@ -143,12 +146,11 @@ const Notification = () => {
             <img src={seven} alt="" className="w-16" />
             <div>
               <p className="explanation flex gap-x-2 items-center">
-                <span className="user-name font-extrabold text-darkblue">
-                Anna Kim
+                <span className="user-name font-extrabold text-darkblue hover:text-fontblue">
+                  Anna Kim
                 </span>
                 left the group{" "}
                 <span className="font-extrabold text-fontblue">Chess Club</span>
-              
               </p>
               <span>2 weeks ago</span>
             </div>
